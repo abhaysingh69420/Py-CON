@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>The Next Web News</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      background-image: url({% static 'nn.png' %});
+    }
+    </style>
+  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <style type="text/css"> @media (min-width: 1200px) {
+    .container{
+        max-width: 1290px;
+    }
+}
+span { display: flex; 
+       justify-content: center }
+
+.text {
+  
+    font-family: verdana;
+    font-size: 6em;
+    font-weight: 700;
+    color: white;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+</style>
+</head>
+<body class="solid" >
+{% load static %}
+<div class="jumbotron" style="background-image: url({% static 'nn1.png' %}); color:black,min-height: 300;">
+
+{% load static %}
+<img align="right" src="{% static "tnw.jpg" %}" alt="Thenextweb" style="margin-top:-28px"; height="140" width="320">
+
+    <span class="text">
+        The Next Web News 
+   </span>
+   {% load static %}
+   <img align="left" src="{% static "bt.png" %}" alt="Py-NEWS" style="margin-top:-85px"; height="120" width="155">
+</div>
+<center>
+    <a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:8000" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">Home</a>
+    <a class="btn btn-danger btn-lg" role="button" href="http://127.0.0.1:8000/TechRadar" style=" font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); ">Techradar</a> &nbsp;&nbsp;&nbsp;&nbsp;
+   <a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:8000/techcrunch" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); ">Techcrunch</a>
+   &nbsp;&nbsp;&nbsp;&nbsp;
+   <a class="btn btn-danger btn-lg" role="button" href="http://127.0.0.1:8000/wired" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">Wired</a>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+     <a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:8000/theverge" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">The Verge</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+ <a class="btn btn-danger btn-lg" role="button" href="http://127.0.0.1:8000/thenextweb" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">The Next Web</a>
+ &nbsp;&nbsp;&nbsp;&nbsp;
+ <a class="btn btn-primary btn-lg" role="button" href="http://127.0.0.1:8000/engadget" style="font-weight: 500;font-size: 28px; border-radius: 10px; border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);">Engadget</a>
+ <br>
+ </center><br><br>
+
+<div class="container">
+  <div class="row">
+
+{% for new, des,i,ur in mylist %}
+<div class="col-lg-4" >
+<div class="thumbnail" style="border: none;  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.9);">
+
+<a href="{{ur}}" target="_blank">
+<br><h1> {{new}}</h1> <br>
+<img src="{{i}}" alt="" width="390" height="240">
+</a>
+<br><div class="caption" style="font-size: 20px;">     
+<b>Description: </b>{{des}}
+    </div>
+</div>
+</div>
+
+{% endfor %}   
+
+</div></div>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PYPOD</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+  </head>
+  <body class="d-flex flex-column">
+    
+    {% load static %}
+<div class="jumbotron" style="background-image: url({% static 'imgs/cc2.png' %}); color:black,min-height: 300;">
+
+{% load static %}
+<img align="left" src="{% static 'imgs/asd.png' %}" alt="Py-POD" style="margin-top:-25px"; height="135" width="155">
+
+    <span class="text">
+        Py-POD: Latest Podcasts 
+   </span>
+</div>
+
+    <main class="container flex-grow-1">
+      <div class="row">
+        <div class="col">
+          {% for episode in episodes %}
+          <section class="card mb-3">
+            <div class="row no-gutters">    
+              <div class="col-md-2 my-auto">
+                <img
+                  src="{{ episode.image }}"
+                  class="img-fluid ml-3 my-3"
+                  alt="{{ episode.podcast_name }}"
+                />
+              </div>
+              <div class="col-md-10">
+                <div class="card-body ml-3">
+                  <h3 class="card-title">{{ episode.title }}</h3>
+                  <p class="card-text">{{ episode.description }}</p>
+                  <a href="{{ episode.link }}">
+                    <p class="card-text">🎧 Listen to this episode</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          {% endfor %}
+        </div>
+      </div>
+    </main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+    
+        <ul class="navbar-nav">
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="mailto:abhaysingh69420@gmail.com">Mail</a>
+          </li>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://github.com/abhaysingh69420/Py-CON">Github</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.linkedin.com/in/abhaypsingh69420/">LinkedIn</a>
+          </li>
+    
+          
+        </li>
+        </ul>
+      </div>
+       <style type="text/css"> @media (min-width: 1200px) {
+          .container{
+              max-width: 1290px;
+          }
+      }
+      span { display: flex; 
+             justify-content: center }
+      
+      .text {
+        
+          font-family: verdana;
+          font-size: 6em;
+          font-weight: 700;
+          color: white;
+          text-shadow: 1px 1px 1px #919191,
+              1px 2px 1px #919191,
+              1px 3px 1px #919191,
+              1px 4px 1px #919191,
+              1px 5px 1px #919191,
+              1px 6px 1px #919191,
+              1px 7px 1px #919191,
+              1px 8px 1px #919191,
+              1px 9px 1px #919191,
+              1px 10px 1px #919191,
+          1px 18px 6px rgba(16,16,16,0.4),
+          1px 22px 10px rgba(16,16,16,0.2),
+          1px 25px 35px rgba(16,16,16,0.2),
+          1px 30px 60px rgba(16,16,16,0.4);
+      }
+     </style>
+     <style>
+   
+      body {
+        background-image: url({% static 'cc2.png' %});
+      }
+      </style>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  
+</html>

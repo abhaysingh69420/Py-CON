@@ -1,0 +1,143 @@
+{% extends 'app/links.html' %}
+
+{% load static%}
+
+{% block content %}
+
+
+<div class="container "> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+      
+          <ul class="navbar-nav">
+            
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            </li>
+            <li class="nav-item active">
+      
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'updatepython' %}">Update Python Blogs</a>
+            </li>
+      
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'updateprog' %}">Update Programming Blogs</a>
+            </li>
+      
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'updatehiring' %}">Update Hiring Blogs</a>
+            </li>
+      
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'updatecrypto' %}">Update Crypto Blogs</a>
+            </li>
+      
+            
+          </li>
+          </ul>
+        </div>
+        
+      
+      </nav>
+
+    
+
+    <h1>Hiring Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in hiringcontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+    <h1>Python Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in pycontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+
+    <h1>Crypto Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in cryptocontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+    <h1>Programming Blogs</h1>
+    <div class="card-columns" style="padding: 10px; margin: 20px;">
+    {% for p in progcontent %}
+        <div class="card" style="width: 18rem; border:5px black solid">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">
+           
+            <div class="card-body">
+            <h5 class="card-title">{{p.headline}}</h5>
+            <a href="{{p.url}}">For more info click here </a>
+            
+            </div>
+        </div>
+     {% endfor %}
+    
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+    
+        <ul class="navbar-nav">
+          
+          <li class="nav-item active">
+            <a class="nav-link" href="mailto:abhaysingh69420@gmail.com">Mail</a>
+          </li>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://github.com/abhaysingh69420/Py-CON">Github</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="https://www.linkedin.com/in/abhaypsingh69420/">LinkedIn</a>
+          </li>
+    
+          
+        </li>
+        </ul>
+      </div>
+
+
+
+    
+
+{% endblock %}
