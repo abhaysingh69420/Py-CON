@@ -8,7 +8,7 @@ Fetches Blogs with specific tags from Medium org.
 ## Py-POD:
 Uses RSS feed parser to get new Podcast episode from pre-specified Sources.
 ## Links:
-https://sites.google.com/view/py-conbyabhay/home
+https://py-con.bss.design
 	
 ## Setup
 To run this project, clone it locally and simple run this command:
